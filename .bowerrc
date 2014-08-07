@@ -1,0 +1,4 @@
+{
+   "directory" : "vendor",
+   "shorthand-resolver" : "git@git.locationlabs.com:{{shorthand}}"
+}

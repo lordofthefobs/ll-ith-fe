@@ -1,0 +1,152 @@
+//**************************************************************************************************
+//                            A P P . S C S S                         
+//**************************************************************************************************
+//
+//   Rules for app.scss ONLY 
+//   
+//   Notes on using app.scss:
+//   ----------------------------------------
+//   1) This file should serve as the delta for including partial SASS imports in the form of:
+//      
+//          @import "foo";
+//
+//   2) If a particular project does not require a certain file, such as common/_lists.scss, then
+//      that file can be removed from that project.
+//    
+//           
+//   TOC : app includes imports for:
+//   -----------------------------------
+//   - variables
+//      * colors
+//      * zindex
+//   - mixins
+//      * mixins_styles
+//   - common
+//      * normalize
+//      * typography
+//      * lists
+//      * buttons
+//      * graphics
+//      * global_header
+//      * global_footer
+//      * errors
+//      * forms
+//      * errors
+//   - layouts
+//      * containers
+//      * global_header
+//      * global_footer
+//      * sidebar
+//   - hello_world !!! REMOVE THIS !!!
+//   - breakpoints
+//      * 480up
+//      * 768up
+//      * 1030up
+//      * 1240up
+//      * 2x (retina)
+//   
+//**************************************************************************************************
+
+//======================
+//   GLOBAL VARIABLES
+//======================
+
+@import "variables/colors";
+@import "variables/zindex";
+
+//============
+//   MIXINS
+//============
+
+@import "mixins/mixins_styles";
+
+//===============
+//   FUNCTIONS
+//===============
+//   Add stylesheets containing any SASS functions for your app to utilize here.
+
+//===================
+//   COMMON STYLES
+//===================
+//   These are the base styles that cover the smallest device width possible and serve 
+//   as the foundation for all other device widths including desktop. They should be kept light
+//   applying overrides as needed per device width via media queries in an upward fashion.
+
+@import "common/normalize";
+@import "common/typography";
+@import "common/lists";
+@import "common/buttons";
+@import "common/graphics";
+@import "common/errors";
+@import "common/forms";    
+@import "common/errors";
+
+//======================
+//   COMPONENT STYLES
+//======================
+//   Components are the UI building blocks of the app. Consult the README.md file inside
+//   the `components` directory for more details.
+
+//===================
+//   LAYOUT STYLES
+//===================
+
+@import "layout/containers";
+@import "layout/global_header";
+@import "layout/global_footer";
+@import "layout/sidebar";
+
+//===============================================
+//   !!!HELLO WORLD !!! REMOVE THIS IMPORT !!!
+//===============================================
+@import "hello_world";
+
+//===================
+//   MOBILE STYLES
+//===================
+//   All media targeted styles can be added to their dedicated stylesheet based on targeted width.
+
+//----------------------------------------------
+//   (MOBILE - 480up) : Larger Mobile Devices
+//----------------------------------------------
+//   This covers devices that are in between tablet size and the most common device width of 320px.
+
+@media only screen and (min-width: 481px) {
+   @import "breakpoints/481up";
+}
+
+//--------------------------------------------------------------
+//   (MOBILE - 768up) : Tablets, Laptops and Smaller Desktops
+//--------------------------------------------------------------
+//   This covers the average viewing width for larger tablets, laptops and desktops. 
+//   You can begin to add any resource intensive styles here.
+
+@media only screen and (min-width: 768px) {
+   @import "breakpoints/768up";
+}
+
+//----------------------------------
+//   (MOBILE - 1030up) : Desktops
+//----------------------------------
+
+@media only screen and (min-width: 1030px) {
+   @import "breakpoints/1030up";
+}
+
+//-----------------------------------------------------------------
+//   (MOBILE - 1240up) : Larger Monitors and Full Screen Viewers
+//-----------------------------------------------------------------
+
+@media only screen and (min-width: 1240px) {
+   @import "breakpoints/1240up";
+}
+
+//--------------------------------------------------
+// (MOBILE - 2x) : Retina (2x Resolution Devices)
+//--------------------------------------------------
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+   @import "breakpoints/2x";
+}

@@ -1,0 +1,50 @@
+buildscript {
+   repositories {
+       maven {
+         url 'http://artifactory.engr.wavemarket.com/repo'
+       }
+   }
+
+   dependencies {
+      classpath(group: 'com.locationlabs', name: 'gradle_ubuntu_packager', version:'+')
+   }
+}
+
+def lines = new File("package.json").readLines()
+def pattern = ~/["']version["']\s?:\s["']([0-9.]+)["']/
+def version = lines*.find(pattern, {match, version -> return version}).find()
+
+if (!version) {
+    throw new ResourceException("Unable to parse version from package.json")
+}
+
+project.version = version
+project.description = "ITHFE"
+
+apply plugin: 'ubuntu'
+
+ubuntu {
+   name         = "ithfe"
+   author       = "Location Labs"
+   debDir       = "deb/dpkg"
+   email        = "info@locationlabs.com"
+   homepage     = "http://www.locationlabs.com"
+   releaseNotes = "Initial version of the ithfe."
+   depends {
+      on "nginx"
+   }
+}
+
+deb {
+
+   doFirst {
+      ubuntu {
+         // ithfe virtualenv
+         addFilesToDeb(new File("dist").listFiles(),
+                       "/var/www/ithfe")
+
+         // service configurations
+         addFileToDeb(new File("deb/conf/nginx/ithfe"), "/etc/nginx/sites-available")
+      }
+   }
+}

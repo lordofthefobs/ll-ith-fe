@@ -1,0 +1,31 @@
+//**************************************************************************************************
+//                               _ H E L L O _ W O R L D . S C S S                         
+//**************************************************************************************************
+//
+//   IMPORTANT!! This file is an example and SHOULD be removed.
+//
+//**************************************************************************************************
+.helper-hello-world { color: #ff0000; }
+
+h1 {
+   font-size: 200%;
+   padding: 1em 0;
+   text-align: center;
+}
+
+.powered-by-ll {
+   background: url("/assets/images/logo_ll.jpg") no-repeat 0 1.5em;
+   width: 100px;
+   height: 31px;
+   padding-bottom: 7em;
+   font-size: small;
+   text-align: center;
+   margin: 0 auto;
+}
+
+.gopher {
+   background: url("/assets/images/ember-productivity-sm.png") no-repeat 0 0;
+   width: 221px;
+   height: 184px;
+   margin: 1em auto 2em;
+}

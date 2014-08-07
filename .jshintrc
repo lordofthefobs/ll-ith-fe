@@ -1,0 +1,12 @@
+{
+   "predef" : [
+      "__dirname",
+      "requireModule",
+      "require",
+      "module",
+      "test",
+      "expect",
+      "equal",
+      "Ember"
+   ]
+}

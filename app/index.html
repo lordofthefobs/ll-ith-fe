@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+   <head>
+      <title>ith_fe - An Ember app</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <!-- build:css /assets/vendor.min.css -->
+      <!-- bower:css -->
+      <!-- endbower -->
+      <!-- endbuild -->
+
+      <!-- build:js /assets/vendor.min.js -->
+      <!-- bower:js -->
+      <!-- endbower -->
+      <!-- endbuild -->
+
+      <!-- build:css /assets/app.min.css -->
+      <link rel="stylesheet" href="/assets/app.css">
+      <!-- endbuild -->
+
+      <!-- build:js /assets/app.min.js -->
+      <script src="/assets/app.js"></script>
+      <script src="/assets/templates.js"></script>
+      <!-- endbuild -->
+
+   </head>
+   <body>
+      <script type="text/javascript">
+         window.App = requireModule("ith_fe/app")["default"];
+      </script>
+   </body>
+</html>

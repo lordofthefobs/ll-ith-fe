@@ -1,0 +1,12 @@
+server {
+   listen 80;
+
+   location / {
+      alias /var/www/ithfe/;
+   }
+
+   location /hostname {
+      alias /usr/share/nginx/www/hostname;
+      autoindex off;
+   }
+}

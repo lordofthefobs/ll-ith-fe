@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+case "\$1" in
+    purge)
+        # clean up log directory
+        rm -f /var/log/ithfe/*
+esac

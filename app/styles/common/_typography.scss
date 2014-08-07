@@ -1,0 +1,15 @@
+//**************************************************************************************************
+//                              _ T Y P O G R A P H Y . S C S S                         
+//**************************************************************************************************
+//
+//   Rules for _typography.scss ONLY 
+//   
+//   Notes on using _typography.scss:
+//   ----------------------------------------
+//   1) Styles here GENERICALLY apply color, font, and text styles.
+//      a) Styles here are very GENERIC (e.g. body, h1, etc) .
+//      b) Do NOT add margins, padding, or line-height to generic selectors
+//            
+//   2) Styles that are UNIQUE to a particular element, widget, or content section should be placed
+//      in the relevant stylesheet.
+//   3) Styles for any form selector are now in forms.scss. 
