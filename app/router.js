@@ -8,9 +8,7 @@ var Router = Ember.Router.extend();
 
 Router.map(function() {
 	this.resource("devices");
-	this.route("device", {
-		path: "device/:device_id"
-	});		
+	this.route("rules");
 });
 
 export default Router;

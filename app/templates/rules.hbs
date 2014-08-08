@@ -1,0 +1,28 @@
+<div>
+	<h2>Alert me when following devices are on at the same time</h2>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<td></td>
+				<td>Name</td>
+				<td>Mac</td>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each}}
+				<tr>
+					<td>{{input type="checkbox"}}</td>
+					<td>{{input type="text" value=name}}</td>
+					<td>{{mac}}</td>
+				</tr>
+			{{/each}}
+			<tr>
+				<td>
+					<button {{action "update"}} class="btn btn-default">Save</button>	
+				</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
