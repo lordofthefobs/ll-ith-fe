@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">Name</div>
+        <div class="col-sm-6">Mac</div>
+    </div>
+    {{#each}}
+	    <div class="row">
+	        <div class="col-sm-6">{{input type="text" value=name}}</div>
+	        <div class="col-sm-6">{{mac}}</div>
+	    </div>
+    {{/each}}
+</div>
+
+<div>
+	<button class="btn btn-default">Update</button>
+</div>

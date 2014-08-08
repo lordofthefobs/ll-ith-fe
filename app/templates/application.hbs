@@ -1,21 +1,20 @@
-<div id="container-outer">  
-   <div id="container"  class="container"
-                       >
+<div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+             {{#link-to "devices"}}DEVICES{{/link-to}}
+            </li>
+        </ul>
+    </div>
 
-      <header id="app-branding-header">
-         <div id="app-branding"></div>
-      </header>
-      
-      <div id="container-content-outer">
-         <div id="container-content">
-            <div id="container-content-inner">
-               <main id="content-main" role="main">
-                  <section id="content-view">
-                     {{ outlet "content_main" }}
-                  </section>
-               </main>
+    <!-- Page content -->
+    <div id="page-content-wrapper">
+        <!-- Keep all page content within the page-content inset div! -->
+        <div class="page-content inset">
+            <div class="row">
+                {{outlet}}
             </div>
-         </div>
-      </div>
-   </div>
+        </div>
+    </div>
 </div>
